@@ -1,0 +1,37 @@
+<header>
+  <nav class="navbar navbar-toggleable-md bg-faded">
+    <button class="navbar-toggler navbar-toggler-right" type="button"
+      data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" <%= link_to image_tag("home.png"), root_path, id: "logo-img" %></a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <form action="users" method="get" class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2 my-lg-2" type="text" name="q">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+          <%= t ".search" %></button>
+      </form>
+      <ul class="navbar-nav mr-auto">
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+<!--           <div class="dropdown">
+            <a href="#" class="nav-link dropdown-toggle btn btn-outline-primary"
+              data-toggle="dropdown">
+              <%= t ".hi" %>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="nav-link" <%= link_to t(".profile"), "#" %></li>
+              <li><a class="nav-link" <%= link_to t(".setting"), "#" %></li>
+              <li class="divider"></li>
+              <li>
+                <a class="nav-link" <%= link_to t(".log_out"), "#" %>
+              </li>
+            </ul>
+          </div> -->
+          <%= link_to t(".log_in"), "#", class: "btn btn-outline-info" %>
+      </form>
+    </div>
+  </nav>
+</header>

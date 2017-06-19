@@ -16,21 +16,23 @@
       <ul class="navbar-nav mr-auto">
       </ul>
       <form class="form-inline my-2 my-lg-0">
-<!--           <div class="dropdown">
+        <% if logged_in? %>
+          <div class="dropdown">
             <a href="#" class="nav-link dropdown-toggle btn btn-outline-primary"
               data-toggle="dropdown">
-              <%= t ".hi" %>
+              <%= "Hi" %> <%= @current_user.name %>
             </a>
             <ul class="dropdown-menu">
-              <li><a class="nav-link" <%= link_to t(".profile"), "#" %></li>
-              <li><a class="nav-link" <%= link_to t(".setting"), "#" %></li>
-              <li class="divider"></li>
+              <li><a class="nav-link" <%= link_to "Profile", current_user %></li>
+              <li><a class="nav-link" <%= link_to "Setting", "#" %></li>
               <li>
-                <a class="nav-link" <%= link_to t(".log_out"), "#" %>
+                <a class="nav-link" <%= link_to "Log out", logout_path, method: :delete %>
               </li>
             </ul>
-          </div> -->
-          <%= link_to t(".log_in"), "#", class: "btn btn-outline-info" %>
+          </div>
+        <% else %>
+          <%= link_to t(".log_in"), login_path, class: "btn btn-outline-info" %>
+        <% end %>
       </form>
     </div>
   </nav>

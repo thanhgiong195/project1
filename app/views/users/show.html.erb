@@ -9,4 +9,13 @@
       </h1>
     </section>
   </aside>
+  <div class="col-md-8">
+    <% if @user.authorposts.any? %>
+      <h3>Authorposts (<%= @user.authorposts.size %>)</h3>
+      <ol class="authorposts">
+        <%= render @authorposts %>
+      </ol>
+      <%= will_paginate @authorposts %>
+    <% end %>
+  </div>
 </div>

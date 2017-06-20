@@ -5,3 +5,8 @@ user:
   user_show: 15
 avatar:
   size: 35
+  size_home: 50
+authorpost:
+  number: 15
+  content_size: 300
+  picture_size: 5

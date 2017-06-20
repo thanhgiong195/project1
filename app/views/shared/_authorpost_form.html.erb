@@ -4,7 +4,7 @@
     <%= f.text_area :content, placeholder: t(".placeholder") %>
   </div>
   <%= f.submit t(".post"), class: "btn btn-primary" %>
-<span class="picture">
+  <span class="picture">
     <%= f.file_field :picture, accept: "image/jpeg,image/gif,image/png" %>
   </span>
 <% end %>

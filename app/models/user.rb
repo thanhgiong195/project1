@@ -3,6 +3,8 @@ class User < ApplicationRecord
 
   before_save :downcase_email
 
+  has_many :authorposts, dependent: :destroy
+
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
 
   validates :name, presence: true, length: {maximum: Settings.user.name_max}
@@ -41,6 +43,10 @@ class User < ApplicationRecord
 
   def current_user? user
     self == user
+  end
+
+  def feed
+    Authorpost.load_feed id
   end
 
   private

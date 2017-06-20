@@ -61,7 +61,28 @@ en:
       cofirm_delete: "You sure delete?"
     destroy:
       delete_success: "Delete success"
+    show:
+      pl_login: "Please log in!"
   shared:
     error_messages:
       the_form: "The form contains"
       error: "error"
+    authorpost_form:
+      placeholder: "What's on your mind?"
+      post: "Post"
+  authorposts:
+    create:
+      post_success: "Authorpost created"
+      post_error: "Post error!"
+    destroy:
+      delete_success: "Authorpost delete!"
+      delete_error: "Delete authorpost error!"
+    authorpost:
+      post: "Post"
+      ago: "ago"
+      delete: "Delete"
+      you_sure: "You sure delete?"
+  static_pages:
+    home:
+      authorpost: "Authorpost"
+      post: "Post"

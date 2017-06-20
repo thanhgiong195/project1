@@ -1,9 +1,9 @@
-<% provide :title, t(".sign_up") %>
-<h1><%= t ".sign_up" %></h1>
+<% provide :title, t(".edit_user") %>
+<h1><%= t ".edit_user" %></h1>
 
 <div class="row">
   <div class="col-md-6 offset-md-3">
-    <%= form_for @user, url: signup_path do |f| %>
+    <%= form_for @user do |f| %>
       <%= render "shared/error_messages" %>
 
       <%= f.label :name, t(".name") %>
@@ -18,7 +18,7 @@
       <%= f.label :password_confirmation, t(".password_confirm") %>
       <%= f.password_field :password_confirmation, class: "form-control" %>
 
-      <%= f.submit t(".btn_create_acc"), class: "btn btn-primary" %>
+      <%= f.submit t(".btn_submit"), class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>

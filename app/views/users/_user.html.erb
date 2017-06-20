@@ -1,0 +1,9 @@
+<tr>
+  <td><%= gravatar_for user, size: Settings.avatar.size %></td>
+  <td><%= link_to user.name, user, class: "btn btn-primary btn-user" %></td>
+  <td><%= user.email %></td>
+  <% if current_user.is_admin? && !current_user.current_user?(user) %>
+    <td><%= link_to (t".delete"), user, method: :delete, data:
+      {confirm: t(".cofirm_delete")}, class: "btn btn-outline-danger" %></td>
+  <% end %>
+</tr>

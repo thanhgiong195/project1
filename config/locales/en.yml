@@ -24,9 +24,13 @@ en:
       password: "Password"
       new_user: "New user?"
       sign_up_now: "Sign up now!"
+      remember_me: "Remember me"
+    destroy:
+      good_bye: "Good bye."
   users:
     create:
       welcome: "Welcome you to BebeBlog"
+      error: "Error"
     new:
       sign_up: "Sign up"
       name: "Name"
@@ -34,6 +38,29 @@ en:
       password: "Password"
       password_confirm: "Password confirmation"
       btn_create_acc: "Create my account"
+    edit:
+      name: "Name"
+      email: "Email"
+      password: "Password"
+      password_confirm: "Password confirmation"
+      edit_user: "Edit user"
+      btn_submit: "Save changes"
+      pl_login: "Please log in."
+    update:
+      update_success: "Profile updated"
+      update_fail: "Update error!"
+    index:
+      all_users: "User"
+      avatar: "Avatar"
+      name: "Name"
+      email: "Email"
+      delete: "Delete"
+      admin: "Admin"
+      pl_login: "Please login!"
+    user:
+      cofirm_delete: "You sure delete?"
+    destroy:
+      delete_success: "Delete success"
   shared:
     error_messages:
       the_form: "The form contains"

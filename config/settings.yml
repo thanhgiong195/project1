@@ -2,3 +2,6 @@ user:
   name_max: 50
   email_max: 250
   password_min: 6
+  user_show: 15
+avatar:
+  size: 35

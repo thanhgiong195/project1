@@ -2,7 +2,10 @@ class Authorpost < ApplicationRecord
   belongs_to :user
 
   scope :feed_sort, ->{order created_at: :desc}
-  scope :load_feed, ->id{where "user_id = ?", id}
+  scope :load_feed, ->(id, following_ids) do
+    where "user_id IN (#{following_ids}) OR user_id = :user_id",
+      following_ids: following_ids, user_id: id
+  end
 
   mount_uploader :picture, PictureUploader
 

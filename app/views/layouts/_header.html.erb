@@ -18,6 +18,7 @@
       </ul>
       <form class="form-inline my-2 my-lg-0">
         <% if logged_in? %>
+          <%= link_to t(".users"), users_path, class: "btn btn-outline-info" %>
           <div class="dropdown">
             <a href="#" class="nav-link dropdown-toggle btn btn-outline-primary"
               data-toggle="dropdown">
@@ -28,7 +29,8 @@
                 <a class="nav-link" <%= link_to t(".profile"), current_user %>
               </li>
               <li>
-                <a class="nav-link" <%= link_to t(".setting"), "#" %>
+                <a class="nav-link" <%= link_to t(".setting"),
+                  edit_user_path(current_user) %>
               </li>
               <li>
                 <a class="nav-link" <%= link_to t(".log_out"), logout_path,

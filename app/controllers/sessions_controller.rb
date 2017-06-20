@@ -7,6 +7,7 @@ class SessionsController < ApplicationController
 
     if user && user.authenticate(params[:session][:password])
       log_in user
+      remember user
       flash[:success] = t ".welcome"
       redirect_to root_url
     else
@@ -16,8 +17,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    flash[:success] = "Good bye"
-    log_out
+    flash[:success] = t ".good_bye"
+    log_out if logged_in?
     redirect_to root_url
   end
 end
